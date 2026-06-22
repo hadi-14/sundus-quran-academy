@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { toast } from "sonner";
 import { SiteLayout, PageHero } from "../components/layout/SiteLayout";
-import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import { addSubmission } from "@/lib/submissions";
 
 export const Route = createFileRoute("/contact")({
@@ -27,12 +27,21 @@ function Contact() {
       <section className="section-pad bg-off-white">
         <div className="container-page grid lg:grid-cols-2 gap-10">
           <div className="space-y-5">
-            <Info Icon={Mail} title="Email" v="academy@sundusquranacademy.com" />
-            <Info Icon={Phone} title="Phone" v="+1 (000) 000-0000" />
-            <Info Icon={MessageCircle} title="WhatsApp" v="+1 (000) 000-0000" />
-            <Info Icon={MapPin} title="Hours" v="Mon–Sun · 5:00 AM – 11:00 PM (your local time)" />
-            <div className="aspect-video rounded-2xl bg-primary-light border border-border flex items-center justify-center text-muted-foreground text-sm">
-              Map placeholder
+            <Info Icon={Mail} title="Email" v={<a href="mailto:info@sundusquranacademy.com" className="hover:text-primary">info@sundusquranacademy.com</a>} />
+            <Info Icon={Phone} title="Phone" v={<a href="tel:+923452178606" className="hover:text-primary">+92 345 2178606</a>} />
+            <Info Icon={MessageCircle} title="WhatsApp" v={<a href="https://wa.me/923452178606" className="hover:text-primary" target="_blank" rel="noopener noreferrer">+92 345 2178606</a>} />
+            <Info Icon={MapPin} title="Address" v="Suite 402, 4th Floor, Block 10 Gulshan-e-Iqbal, NIPA, Main University Road, Karachi 75300" />
+            <Info Icon={Clock} title="Hours" v="Mon–Sun · 5:00 AM – 11:00 PM (your local time)" />
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-soft">
+              <iframe
+                src="https://maps.google.com/maps?q=Suite%20402,%204th%20Floor,%20Block%2010%20Gulshan-e-Iqbal,%20NIPA,%20Main%20University%20Road,%20Karachi%2075300&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="Sundus Quran Academy Location Map"
+              />
             </div>
           </div>
           <form
@@ -83,7 +92,7 @@ function Contact() {
   );
 }
 
-function Info({ Icon, title, v }: { Icon: any; title: string; v: string }) {
+function Info({ Icon, title, v }: { Icon: any; title: string; v: ReactNode }) {
   return (
     <div className="flex items-start gap-4 bg-white rounded-xl border border-border p-5">
       <div className="w-11 h-11 rounded-lg bg-primary-light text-primary flex items-center justify-center"><Icon size={18} /></div>

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/privacy-policy")({
           <h2 className="font-display text-2xl font-bold mt-6">Cookies</h2>
           <p className="text-muted-foreground mt-2">We use minimal cookies for site functionality and basic analytics.</p>
           <h2 className="font-display text-2xl font-bold mt-6">Contact</h2>
-          <p className="text-muted-foreground mt-2">For privacy concerns, email academy@sundusquranacademy.com.</p>
+          <p className="text-muted-foreground mt-2">For privacy concerns, email <a href="mailto:info@sundusquranacademy.com" className="underline hover:text-primary">info@sundusquranacademy.com</a>.</p>
         </div>
       </section>
     </SiteLayout>

@@ -43,13 +43,25 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold tracking-wider uppercase mb-4 text-gold-light">Contact</h4>
           <ul className="space-y-3 text-sm text-white/80">
-            <li className="flex items-center gap-2"><Mail size={14} /> academy@sundusquranacademy.com</li>
-            <li className="flex items-center gap-2"><Phone size={14} /> +1 (000) 000-0000</li>
-            <li className="flex items-center gap-2"><MessageCircle size={14} /> WhatsApp: +1 (000) 000-0000</li>
+            <li className="flex items-center gap-2">
+              <Mail size={14} /> <a href="mailto:info@sundusquranacademy.com" className="hover:text-gold-light">info@sundusquranacademy.com</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={14} /> <a href="tel:+923452178606" className="hover:text-gold-light">+92 345 2178606</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MessageCircle size={14} /> <a href="https://wa.me/923452178606" className="hover:text-gold-light" target="_blank" rel="noopener noreferrer">WhatsApp: +92 345 2178606</a>
+            </li>
           </ul>
           <div className="flex items-center gap-3 mt-5">
-            {[MessageCircle, Facebook, Instagram, Youtube, Music2].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold transition">
+            {[
+              { Icon: MessageCircle, href: "https://wa.me/923452178606", label: "WhatsApp" },
+              { Icon: Facebook, href: "#", label: "Facebook" },
+              { Icon: Instagram, href: "#", label: "Instagram" },
+              { Icon: Youtube, href: "#", label: "YouTube" },
+              { Icon: Music2, href: "#", label: "TikTok" }
+            ].map(({ Icon, href, label }) => (
+              <a key={label} href={href} aria-label={label} className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold transition">
                 <Icon size={15} />
               </a>
             ))}
