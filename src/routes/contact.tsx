@@ -8,8 +8,12 @@ import { addSubmission } from "@/lib/submissions";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Sundus Quran Academy" },
-      { name: "description", content: "Get in touch with Sundus Quran Academy. We respond within 24 hours." },
+      { title: "Contact Us — Sundus Quran Academy" },
+      { name: "description", content: "Have questions about our online Quran classes, timings, or plans? Get in touch with Sundus Quran Academy support. We respond within 24 hours." },
+      { name: "keywords", content: "contact quran academy, online quran support, help learning quran, customer service sundus quran" },
+      { property: "og:title", content: "Contact Us — Sundus Quran Academy" },
+      { property: "og:description", content: "Get in touch with us for any inquiries about courses, pricing, tutors, or schedules." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Contact,

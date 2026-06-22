@@ -13,8 +13,12 @@ const stats = [
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sundus Quran Academy" },
-      { name: "description", content: "Learn about our mission to bring authentic Quran education to students around the world." },
+      { title: "About Us — Sundus Quran Academy" },
+      { name: "description", content: "Learn about our mission, vision, and how we bring authentic, structured online Quran education to students worldwide." },
+      { name: "keywords", content: "about sundus quran academy, online quran school mission, certified quran tutors, online tajweed teachers" },
+      { property: "og:title", content: "About Us — Sundus Quran Academy" },
+      { property: "og:description", content: "Learn about our mission to make authentic Quran education accessible to everyone, everywhere." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

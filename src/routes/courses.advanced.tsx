@@ -6,8 +6,12 @@ import { COURSES } from "../data/courses";
 export const Route = createFileRoute("/courses/advanced")({
   head: () => ({
     meta: [
-      { title: "Advanced Quran Courses — Sundus Quran Academy" },
-      { name: "description", content: "Advance to Hifz, Qiraat-level Tajweed, and Quranic Arabic with our advanced classes." },
+      { title: "Advanced Quran Courses & Hifz — Sundus Quran Academy" },
+      { name: "description", content: "Take your Quranic studies to the next level. We offer advanced Hifz (memorization) programs, advanced Tajweed rules with Qiraat, and Quranic Arabic grammar." },
+      { name: "keywords", content: "advanced quran classes, online hifz program, learn quranic arabic, advanced tajweed rules" },
+      { property: "og:title", content: "Advanced Quran Courses & Hifz — Sundus Quran Academy" },
+      { property: "og:description", content: "Master Tajweed, memorize the Quran, and study Arabic grammar with certified scholars in one-on-one sessions." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

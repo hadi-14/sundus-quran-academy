@@ -14,8 +14,12 @@ const steps = [
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     meta: [
-      { title: "How It Works — Sundus Quran Academy" },
-      { name: "description", content: "Five simple steps to start learning the Quran online with Sundus Quran Academy." },
+      { title: "How It Works: Our Process — Sundus Quran Academy" },
+      { name: "description", content: "Learn how simple it is to start learning the Quran online: Book a class, get assessed, get matched with a certified tutor, and start your live sessions." },
+      { name: "keywords", content: "how online quran classes work, quran learning process, match quran teacher, learn quran online steps" },
+      { property: "og:title", content: "How It Works: Our Process — Sundus Quran Academy" },
+      { property: "og:description", content: "Discover our 5-step process from booking your free trial to getting certified in Quranic studies." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

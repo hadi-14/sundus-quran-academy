@@ -17,13 +17,20 @@ export const Route = createFileRoute("/courses/$slug")({
   head: ({ loaderData }) => {
     const c = loaderData?.course;
     if (!c) return { meta: [{ title: "Course Not Found — Sundus Quran Academy" }] };
+    const levelLabel = c.level.charAt(0).toUpperCase() + c.level.slice(1);
     return {
       meta: [
-        { title: `${c.title} — Sundus Quran Academy` },
-        { name: "description", content: c.description },
+        { title: `${c.title} Course (${levelLabel}) — Sundus Quran Academy` },
+        { name: "description", content: `${c.description} Join live one-on-one classes with certified tutors. Flexible schedule, personalized pace.` },
+        { name: "keywords", content: `${c.title.toLowerCase()}, online ${c.title.toLowerCase()} course, learn ${c.title.toLowerCase()}, online quran academy, ${c.level} quran course` },
         { property: "og:title", content: `${c.title} — Online Quran Course` },
         { property: "og:description", content: c.description },
         { property: "og:image", content: c.image },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: `${c.title} Course — Sundus Quran Academy` },
+        { name: "twitter:description", content: c.description },
+        { name: "twitter:image", content: c.image },
       ],
     };
   },

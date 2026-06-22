@@ -5,8 +5,12 @@ import { TrialForm } from "../components/TrialForm";
 export const Route = createFileRoute("/free-trial")({
   head: () => ({
     meta: [
-      { title: "Free Trial — Sundus Quran Academy" },
-      { name: "description", content: "Book your free one-on-one trial Quran class today — no commitment required." },
+      { title: "Book a Free Trial Class — Sundus Quran Academy" },
+      { name: "description", content: "Start your Quran learning journey today. Book a free, no-commitment, one-on-one trial Quran class with a certified male or female tutor." },
+      { name: "keywords", content: "free quran trial, learn quran free class, online quran trial, book quran tutor" },
+      { property: "og:title", content: "Book a Free Trial Class — Sundus Quran Academy" },
+      { property: "og:description", content: "Get one free one-on-one Quran class. No commitment required. Experience our teaching style first-hand." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

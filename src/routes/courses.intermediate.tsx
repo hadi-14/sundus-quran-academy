@@ -7,7 +7,11 @@ export const Route = createFileRoute("/courses/intermediate")({
   head: () => ({
     meta: [
       { title: "Intermediate Quran Courses — Sundus Quran Academy" },
-      { name: "description", content: "Develop your recitation and Tajweed with structured intermediate-level Quran classes." },
+      { name: "description", content: "Build your fluency and learn the rules of Tajweed with structured intermediate-level Quran classes. Recitation practice and Islamic studies." },
+      { name: "keywords", content: "intermediate quran classes, learn tajweed rules, fluent quran recitation, online islamic studies" },
+      { property: "og:title", content: "Intermediate Quran Courses — Sundus Quran Academy" },
+      { property: "og:description", content: "Strengthen your recitation, master Tajweed rules, and study core Islamic knowledge with our 1-on-1 classes." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

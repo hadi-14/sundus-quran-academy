@@ -15,8 +15,12 @@ const tutors = [
 export const Route = createFileRoute("/tutors")({
   head: () => ({
     meta: [
-      { title: "Our Tutors — Sundus Quran Academy" },
-      { name: "description", content: "Meet our certified male and female Quran tutors, dedicated to your learning journey." },
+      { title: "Our Certified Tutors — Sundus Quran Academy" },
+      { name: "description", content: "Meet our qualified, certified male and female Quran teachers. Native Arabic speakers graduate from leading Islamic universities, ready to help you or your children learn." },
+      { name: "keywords", content: "quran tutors, online quran teachers, female quran teacher, male quran teacher, tajweed instructors" },
+      { property: "og:title", content: "Our Certified Tutors — Sundus Quran Academy" },
+      { property: "og:description", content: "Meet our certified, patient, and experienced male and female Quran tutors. Start learning with a free trial today." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

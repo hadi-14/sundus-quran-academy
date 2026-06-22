@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Host
+Host: https://sundusquranacademy.com
+
+# Sitemaps
+Sitemap: https://sundusquranacademy.com/sitemap.xml

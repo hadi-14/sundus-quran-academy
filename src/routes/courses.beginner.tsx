@@ -7,7 +7,11 @@ export const Route = createFileRoute("/courses/beginner")({
   head: () => ({
     meta: [
       { title: "Beginner Quran Courses — Sundus Quran Academy" },
-      { name: "description", content: "Start your Quran journey with Noorani Qaida, basic recitation, and introductory Tajweed." },
+      { name: "description", content: "Start your Quran learning journey from the basics. Our beginner courses cover Noorani Qaida, basic Arabic reading, and introductory Tajweed." },
+      { name: "keywords", content: "beginner quran classes, learn arabic alphabet, noorani qaida online, kids quran learning" },
+      { property: "og:title", content: "Beginner Quran Courses — Sundus Quran Academy" },
+      { property: "og:description", content: "Start your Quran learning from the very first letter with Noorani Qaida and basic Tajweed. Book your free trial." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

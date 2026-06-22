@@ -11,8 +11,12 @@ const posts = [
 export const Route = createFileRoute("/blogs")({
   head: () => ({
     meta: [
-      { title: "Blog — Sundus Quran Academy" },
-      { name: "description", content: "Articles on Tajweed, Hifz routines, parenting, and Islamic reminders." },
+      { title: "Quran Learning Blog & Tips — Sundus Quran Academy" },
+      { name: "description", content: "Explore articles on Tajweed rules, Quran memorization (Hifz) strategies, parenting tips for Islamic education, and spiritual reminders." },
+      { name: "keywords", content: "quran learning blog, tajweed tips, hifz memorization tips, islamic studies reminders, parenting and quran" },
+      { property: "og:title", content: "Quran Learning Blog & Tips — Sundus Quran Academy" },
+      { property: "og:description", content: "Practical guides and spiritual reminders on learning the Quran, mastering Tajweed, and building Hifz routines." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: () => (

@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/sundus-logo.png.asset.json";
+import logoAsset from "@/assets/sundus-logo-transparent.png";
 
 type Props = { variant?: "dark" | "light"; size?: number; showText?: boolean };
 
@@ -14,7 +14,7 @@ export function Logo({ variant = "dark", size = 52, showText = true }: Props) {
         style={{ width: size, height: size }}
       >
         <img
-          src={logoAsset.url}
+          src={logoAsset}
           alt="Sundus Quran Academy"
           width={size}
           height={size}

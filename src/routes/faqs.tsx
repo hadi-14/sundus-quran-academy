@@ -15,8 +15,12 @@ const faqs = [
 export const Route = createFileRoute("/faqs")({
   head: () => ({
     meta: [
-      { title: "FAQs — Sundus Quran Academy" },
-      { name: "description", content: "Answers to common questions about our online Quran classes, tutors, and pricing." },
+      { title: "Frequently Asked Questions — Sundus Quran Academy" },
+      { name: "description", content: "Got questions? Find answers to common queries about online Quran classes, class timings, female tutors, fees, and how to get started." },
+      { name: "keywords", content: "quran classes faqs, online quran school cost, reschedule quran class, learn quran zoom" },
+      { property: "og:title", content: "Frequently Asked Questions — Sundus Quran Academy" },
+      { property: "og:description", content: "Get answers to your questions about online Quran lessons, scheduling, certified teachers, and free trials." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: FAQs,
